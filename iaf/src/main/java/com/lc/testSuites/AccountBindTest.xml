@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AccountBindTest" parallel="classes" thread-count="5">
+
+
+	    
+	    <test name="TestBindList" preserve-order="true">
+	    	
+		    <parameter name="url" value="account/list" />
+		    <parameter name="objBean" value="list" />
+		    
+			<!-- add assert -->
+		    <parameter name="status" value="OK" />
+		    <parameter name="statusCode" value="200" />
+		    <parameter name="body" value="SUCCESS" />
+	        <classes>
+	            <class name="com.lc.testScript.AccountBindTest">
+	            	<methods>
+                    <include name="TestBindList" />
+                	</methods>
+	            </class>
+	        </classes>
+	    </test>
+	    
+	    <test name="TestBindAuthBind" preserve-order="true">
+		    <parameter name="url" value="account/authBind" />
+		    <parameter name="objBean" value="authBind" />
+		    
+			<!-- add assert -->
+		    <parameter name="status" value="OK" />
+		    <parameter name="statusCode" value="200" />
+		    <parameter name="body" value="SUCCESS" />
+	        <classes>
+	            <class name="com.lc.testScript.AccountBindTest">
+	            	<methods>
+                    	<include name="TestBindAuthBind" />
+                	</methods>
+	            </class>
+	        </classes>
+	    </test>
+
+</suite>
