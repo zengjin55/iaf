@@ -1,20 +1,21 @@
 package com.lc.util;
 
 public class Contants {
-//	定义访问地址
+//址
 
 
-	public static  String url="http://toa-asset-stg.paic.com.cn";
-//	定义基本路径
-	public static String commonUrl="/toa-asset/webservice/asset/";
+	public static  String url="http://172.18.100.62:8080";
+//	public static  String url="http://localhost:8888";
+//	
+	public static String commonUrl="";
 
-//	项目文件路径
-	public static String baseUrl="D:/Users/liuchao448/git/InterfaceTestPlatform";
+//	
+	public static String baseUrl="E:/InterfaceTest";
 
-//	对象仓库文件路径
+//	
 
 
-	public static String xmlUrl=baseUrl+"/src/com/lc/xml/mapBean.xml";
+	public static String xmlUrl=baseUrl+"/src/main/java/com/lc/xml/mapBean.xml";
 
 
 }

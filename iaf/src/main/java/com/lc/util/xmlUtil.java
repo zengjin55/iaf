@@ -42,18 +42,18 @@ public class xmlUtil {
 	      Document document;
 	      try {
 			document = saxReader.read(file);
-	        //����������ڵ�������ӽڵ�
+	        //
 	        for (Iterator iter = document.getRootElement().elementIterator(); iter.hasNext();)
 	        {
 	            Element e1 = (Element) iter.next();
 	            
 	            if(e1.attributeValue("beanName").equalsIgnoreCase(beanName)){
-	            	//����������ڵ�������ӽڵ���Ŀ���ӽڵ�
+	            	//
 	            	
 		            for (Iterator iter1 = e1.elementIterator(); iter1.hasNext();)
 			        {
 			            Element e2 = (Element) iter1.next();
-			         // ���������
+			         // 
 //			            System.out.println("e2.getData()"+e2.getData());
 
 

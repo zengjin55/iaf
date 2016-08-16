@@ -22,9 +22,7 @@
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <testng.filepath>testng.xml</testng.filepath>
-        <taskdate></taskdate>
-        <logsPath>autotest/target/classes/config/</logsPath>
+        <xmlFileName>TestGetRole.xml</xmlFileName>
     </properties>
     <dependencies>
         <dependency>
@@ -79,6 +77,12 @@
     <artifactId>jaxen</artifactId>
     <version>1.1.6</version>
 </dependency>
+
+<dependency>
+    <groupId>com.google.inject</groupId>
+    <artifactId>guice</artifactId>
+    <version>4.1.0</version>
+</dependency>
     
         
      </dependencies>   
@@ -94,20 +98,40 @@
     </resources>
     <plugins>
     
+
+       
        <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.19</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>src/test/java/testSuites/${xmlFileName}</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+
+      <!-- 添加插件,添加ReportNg的监听器，修改最后的TestNg的报告 -->
+      <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.19</version>
+          <version>2.5</version>
           <configuration>
-          <forkMode>once</forkMode>
-          <argLine>-Dfile.encoding=UTF-8</argLine>
+              <properties>
+                  <property>
+                      <name>usedefaultlisteners</name>
+                      <value>false</value>
+                  </property>
+                  <property>
+                      <name>listener</name>
+                      <value>org.uncommons.reportng.HTMLReporter</value>
+                  </property>
+              </properties>
+              <workingDirectory>target/</workingDirectory>
+              <!-- <forkMode>always</forkMode> -->
 
-<!--                     <suiteXmlFiles> -->
-<!--                         <file>src/test/resources/testng/${testng.filepath}.xml</file> -->
-<!--                     </suiteXmlFiles> -->
-           </configuration>
+          </configuration>
       </plugin>
-       
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.5.1</version>
