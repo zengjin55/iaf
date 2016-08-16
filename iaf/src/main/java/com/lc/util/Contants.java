@@ -4,8 +4,8 @@ public class Contants {
 //ַ
 
 
-	public static  String url="http://172.18.100.62:8080";
-//	public static  String url="http://localhost:8888";
+//	public static  String url="http://172.18.100.62:8080";
+	public static  String url="http://localhost:8888";
 //	
 	public static String commonUrl="";
 
