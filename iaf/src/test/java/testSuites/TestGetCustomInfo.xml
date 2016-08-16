@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestGetCustomInfo" parallel="classes" thread-count="5">
+	<parameter name="url" value="/sys/login" />
+	<parameter name="objBean" value="loginIn" />
+	<parameter name="status" value="OK" />
+	<parameter name="statusCode" value="200" />
+	<parameter name="xmlName" value="mapCustomInfo" />
+
+		<test name="TestGetCustomInfo" preserve-order="true">
+			<parameter name="url" value="/customTotal/selectCustomInfo" />
+			<parameter name="objBean" value="GetCustomInfo" />
+
+
+			<parameter name="status" value="OK" />
+			<parameter name="statusCode" value="200" />
+			<parameter name="body" value="custTypeId" />
+			<classes>
+				<class name="com.lc.testScript.GetCustomInfoTest">
+					<methods>
+						<include name="TestGetCustomInfo" />
+						<!--<include name="TestGetRole2" />-->
+					</methods>
+				</class>
+			</classes>
+		</test>
+
+
+</suite>

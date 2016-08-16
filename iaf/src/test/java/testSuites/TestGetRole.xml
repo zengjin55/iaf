@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestGetRole" parallel="classes" thread-count="5">
+	<parameter name="url" value="/sys/login" />
+	<parameter name="objBean" value="loginIn" />
+	<parameter name="status" value="OK" />
+	<parameter name="statusCode" value="200" />
+	<parameter name="statusCode" value="200" />
+	<parameter name="xmlName" value="mapRole" />
+
+		<!--<test name="TestLoginIn" preserve-order="true">-->
+			<!--<parameter name="url" value="/sys/login" />-->
+			<!--<parameter name="objBean" value="loginIn" />-->
+
+			<!--&lt;!&ndash; add assert &ndash;&gt;-->
+			<!--<parameter name="status" value="OK" />-->
+			<!--<parameter name="statusCode" value="200" />-->
+			<!--&lt;!&ndash;<parameter name="body" value="SUCCESS" />&ndash;&gt;-->
+			<!--<classes>-->
+				<!--<class name="com.lc.testScript.GetRoleTest">-->
+					<!--<methods>-->
+						<!--<include name="TestLoginIn" />-->
+					<!--</methods>-->
+				<!--</class>-->
+			<!--</classes>-->
+		<!--</test>-->
+
+		<test name="TestGetRole" preserve-order="true">
+			<parameter name="url" value="/json/getRoleInfo" />
+			<parameter name="objBean" value="GetRole" />
+
+
+			<parameter name="status" value="OK" />
+			<parameter name="statusCode" value="200" />
+			<parameter name="body" value="roleName" />
+			<classes>
+				<class name="com.lc.testScript.GetRoleTest">
+					<methods>
+						<include name="TestGetRole" />
+						<!--<include name="TestGetRole2" />-->
+					</methods>
+				</class>
+			</classes>
+		</test>
+
+
+</suite>

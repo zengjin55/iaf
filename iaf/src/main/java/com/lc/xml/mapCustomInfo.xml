@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+	<!--locator of page map info -->
+
+	<bean beanName="loginIn">
+		<!--Locator lists -->
+		<locator name="userName" value="admin"></locator>
+		<locator name="userPwd" value="1"></locator>
+	</bean>
+
+	<bean beanName="GetCustomInfo">
+		<!--Locator lists -->
+		<locator name="menuId" value="307"></locator>
+		<locator name="rows" value="10"></locator>
+		<locator name="page" value="1"></locator>
+	</bean>
+	
+
+	
+</map>

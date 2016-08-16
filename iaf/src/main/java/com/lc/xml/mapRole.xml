@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+	<!--locator of page map info -->
+	<bean beanName="list">
+		<!--Locator lists -->
+		<locator name="partyNo" value="006734485677"></locator>
+	</bean>
+	
+	<bean beanName="authBind">
+		<!--Locator lists -->
+		<locator name="serviceID" value="jkpay"></locator>
+		<locator name="clientNo" value="59599552"></locator>
+		<locator name="partyNo" value="987654接口连接"></locator>
+		<locator name="accountID" value="ID2356法国风格"></locator>
+		<locator name="channelSource" value="toa-gp就看见"></locator>
+	</bean>
+	
+	<bean beanName="queryasset">
+		<!--Locator lists -->
+		<locator name="appId" value="80001"></locator>
+		<locator name="clientNo" value="243111453182063287"></locator>
+		<locator name="partyNo" value="14531820632871413"></locator>
+		<locator name="channelSource" value="toa-core"></locator>
+		<locator name="timestamp" value="2015-12-17 16:23:20"></locator>
+	</bean>
+	
+	<bean beanName="authRequest">
+	<!--Locator lists -->
+		<locator name="appId" value="80001"></locator>
+		<locator name="clientNo" value="230731433906192363"></locator>
+		<locator name="partyNo" value="006718668369"></locator>
+		<locator name="channelSource" value="toa-core"></locator>
+		<locator name="userName" value="测试一号"></locator>
+		<locator name="idType" value="1"></locator>
+		<locator name="certId" value="114835199508099712"></locator>
+		<locator name="mobileNo" value="18000000009"></locator>
+		<locator name="sex" value="M"></locator>
+		<locator name="birthday" value="1995-08-09"></locator>
+		<locator name="timestamp" value="2015-12-17 16:23:20"></locator>
+	</bean>
+
+	<bean beanName="loginIn">
+		<!--Locator lists -->
+		<locator name="userName" value="admin"></locator>
+		<locator name="userPwd" value="1"></locator>
+	</bean>
+
+	<bean beanName="GetRole">
+		<!--Locator lists -->
+		<locator name="page" value="1"></locator>
+		<locator name="rows" value="10"></locator>
+	</bean>
+	
+
+	
+</map>
