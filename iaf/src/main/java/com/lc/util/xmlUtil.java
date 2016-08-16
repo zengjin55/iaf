@@ -5,7 +5,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Iterator;
-
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
@@ -18,15 +17,15 @@ public class xmlUtil {
 
 
 	 /**
-	 * @param pageName
-	 * @param path
+	 * @param
+	 * @param
 	 * @return
 	 * @throws DocumentException
 	 * @throws IOException
 	 */
-	public static HashMap<String, String>  readXMLDocument(String beanName){
+	public static HashMap<String, String>  readXMLDocument(String beanName,String xmlName){
 		 
-		String path=Contants.xmlUrl;
+		String path=Contants.xmlUrl+xmlName+".xml";
 		 HashMap<String, String> locatorMap=new HashMap<String, String>(); 
 		/* locatorMap.clear();*/
 		 File file = new File(path);
@@ -70,8 +69,7 @@ public class xmlUtil {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-			
-			
+
 
 	        
 	        return locatorMap;
